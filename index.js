@@ -10,7 +10,7 @@ import {animals} from './data/animals.js'
 
 app.get('/',(req,res)=>{
     let arrayAnimales = []
-    let nombre = req.query.animal
+    let nombre = req.query.nombre
     console.log(nombre)
     if(nombre) {
         for (let i = 0; i < animals.length; I++) {
@@ -37,6 +37,10 @@ app.post('/añadir',(req,res)=>{
 
 app.get('/gallery', (req,res)=>{
     res.render('gallery')
+})
+
+app.get('/nuevo',(req,res)=>{
+    res.render('form')
 })
 
 app.listen(8080,()=>{
