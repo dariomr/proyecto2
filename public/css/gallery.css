@@ -1,0 +1,23 @@
+ul {
+    list-style: none;
+}
+
+.card > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cards img {
+    margin: 10px 20px 40px 20px;
+    border: 2px solid #51774e;
+    border-radius: 22px;
+    width: 32em;
+}

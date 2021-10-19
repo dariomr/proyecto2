@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Huesca | Nuevo</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/form.css">
 </head>
 <body>
-    <section>
-        <h1>Añade un animal al zoo</h1>
-        <form action="/add" method="POST">
-            <label>Nombre:</label><input type="text" name="nombre">
-            <label>Dieta:</label><input type="text" name="dieta">
-            <label>Kg:</label><input type="text" name="kg" type="number"/>
-            <label>Especie:</label><input type="text" name="especie">
-            <input type="submit" value="Agregar">
-        </form>
-    </section>
+    <nav>
+        <h1><a href="/">Zoo Huesca</a></h1>
+        <div class="menu">
+            <a href="/nuevo">Nuevo</a>
+            <a href="/gallery">Galería</a>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <h2>Añade un animal al zoo</h2>
+            <div class="container">
+                <form class="form" action="/add" method="POST">
+                    <label>Nombre:</label><input class="fila" type="text" name="nombre">
+                    <label>Dieta:</label><input class="fila" type="text" name="dieta">
+                    <label>Kg:</label><input class="fila" type="text" name="kg" type="number"/>
+                    <label>Especie:</label><input class="fila" type="text" name="especie">
+                    <input class="agregar" type="submit" value="Agregar">
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('./partials/footer.ejs'); %>
 </body>
 </html>

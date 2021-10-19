@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zoo Huesca | Galería</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/gallery.css">
 </head>
 <body>
-    <ul>
-    <%animals.map((animal)=>{%>
-        <li>
-            <%=animal.nombre%><br>
-            <img src="../images/<%=animal.nombre%>.jpg" width="400" height="400" alt="<%=animal.nombre%>">
-        </li>
-        <%})%>
-    </ul>
-
-   <!--  <img src="../images/Serpiente.jpg" width="400" height="400" alt="Mamba Negra">
-    <img src="../images/Tarantula.jpg" width="400" height="400" alt="Tarantula">
-    <img src="../images/Oso.jpg" width="400" height="400" alt="Pardo"> -->
-    <a href="/">Volver</a>
+    <nav>
+        <h1><a href="/">Zoo Huesca</a></h1>
+        <div class="menu">
+            <a href="/nuevo">Nuevo</a>
+            <a href="/gallery">Galería</a>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <ul class="cards">
+                <%animals.map((animal)=>{%>
+                    <li>
+                        <div class="card">
+                            <p><%=animal.nombre%> <%=animal.especie%></p>
+                            <img src="../images/<%=animal.nombre%>.jpg" width="400" height="400" alt="<%=animal.nombre%>">
+                        </div>
+                    </li>
+                <%})%>
+            </ul>
+        </section>
+    </main>
+    <%- include('./partials/footer.ejs'); %>
 </body>
 </html>

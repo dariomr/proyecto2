@@ -11,9 +11,8 @@ import {animals} from './data/animals.js'
 app.get('/',(req,res)=>{
     let arrayAnimales = []
     let nombre = req.query.nombre
-    console.log(nombre)
     if(nombre) {
-        for (let i = 0; i < animals.length; I++) {
+        for (let i = 0; i < animals.length; i++) {
             let animal = animals[i]
             if (animal.nombre == nombre) {
                 arrayAnimales = [animal]
