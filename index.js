@@ -26,13 +26,13 @@ app.get('/',(req,res)=>{
     res.render('index',{animals: arrayAnimales})
 })
 
-app.post('/añadir',(req,res)=>{
-    let nombre = req.query.nombre;
-    let dieta = req.query.dieta;
-    let kg = req.query.kg;
-    let especie = req.query.especie;
+app.post('/add',(req,res)=>{
+    let nombre = req.body.nombre;
+    let dieta = req.body.dieta;
+    let kg = req.body.kg;
+    let especie = req.body.especie;
     const nuevaAnimal=new Animal(nombre,dieta,kg,especie);
-    res.render('index',{insercionAnimal:[...animals,nuevaAnimal]})
+    res.render('index',{animals:[...animals,nuevaAnimal]})
 })
 
 app.get('/gallery', (req,res)=>{
