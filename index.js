@@ -26,6 +26,15 @@ app.get('/',(req,res)=>{
     res.render('index',{animals: arrayAnimales})
 })
 
+app.post('/añadir',(req,res)=>{
+    let nombre = req.query.nombre;
+    let dieta = req.query.dieta;
+    let kg = req.query.kg;
+    let especie = req.query.especie;
+    const nuevaAnimal=new Animal(nombre,dieta,kg,especie);
+    res.render('index',{insercionAnimal:[...animals,nuevaAnimal]})
+})
+
 app.get('/gallery', (req,res)=>{
     res.render('gallery')
 })
