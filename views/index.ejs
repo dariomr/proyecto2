@@ -7,5 +7,15 @@
 </head>
 <body>
     <h1>Zoo Huesca</h1>
+    <ul>
+        <%animals.map((animal)=>{%>
+        <li>
+            <%=animal.nombre%><br>
+            <%=animal.dieta%><br>
+            <%=animal.kg%><br>
+            <%=animal.especie%><br>
+        </li>
+        <%})%>
+    </ul>
 </body>
 </html>
