@@ -4,7 +4,7 @@ const app = express()
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.set('view engine','ejs')
-
+app.use(express.static('./public'));
 import Animal from './entities/Animal.js'
 import {animals} from './data/animals.js'
 
@@ -36,7 +36,7 @@ app.post('/add',(req,res)=>{
 })
 
 app.get('/gallery', (req,res)=>{
-    res.render('gallery')
+    res.render('gallery', {animals})
 })
 
 app.get('/nuevo',(req,res)=>{

@@ -7,9 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="../public/images/Serpiente.jpg" width="400" height="400" alt="Mamba Negra">
-    <img src="../public/images/Tarantula.jpg" width="400" height="400" alt="Tarantula">
-    <img src="../public/images/Oso.jpg" width="400" height="400" alt="Pardo">
+    <ul>
+    <%animals.map((animal)=>{%>
+        <li>
+            <%=animal.nombre%><br>
+            <img src="../images/<%=animal.nombre%>.jpg" width="400" height="400" alt="<%=animal.nombre%>">
+        </li>
+        <%})%>
+    </ul>
+
+   <!--  <img src="../images/Serpiente.jpg" width="400" height="400" alt="Mamba Negra">
+    <img src="../images/Tarantula.jpg" width="400" height="400" alt="Tarantula">
+    <img src="../images/Oso.jpg" width="400" height="400" alt="Pardo"> -->
     <a href="/">Volver</a>
 </body>
 </html>
